@@ -1,0 +1,6 @@
+declare id auto incriment
+
+user structure
+sign in and login (jwt)
+posts (event)
+comments
