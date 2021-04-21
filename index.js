@@ -2,6 +2,7 @@ const express = require('express')
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/authentication');
 const eventRoutes = require('./routes/event');
+const commentRoutes = require('./routes/comments');
 
 // require('dotenv').config()
 // var logger = require('morgan')
@@ -28,6 +29,7 @@ myConnection.connect((err)=>{
 app.use(homeRoutes);
 app.use(authRoutes);
 app.use('/events',eventRoutes);
+app.use(commentRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server listening on Port ${process.env.PORT || 3000}`)

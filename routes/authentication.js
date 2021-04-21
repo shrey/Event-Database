@@ -24,7 +24,7 @@ router.post('/login', async (req, res) => {
 
       return res.status(200).json({
         message: 'Logged In',
-        token: `Bearer ${token}`
+        token: `Insert the following token in the Bearer token: ${token}`
       })
     } else {
       res.status(400).json({
