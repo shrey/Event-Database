@@ -4,3 +4,7 @@ user structure
 sign in and login (jwt)
 posts (event)
 comments
+
+login token
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmdWRzOHExMnkiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwibmFtZSI6InNocmV5MiIsImlhdCI6MTYxODk5MzE0MywiZXhwIjoxNjE5NTk3OTQzfQ.Q-vM5WXsp6FbQU_e2-jzvsE0ZfXdW2ZRAtqEoE2s11E
