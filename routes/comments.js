@@ -4,7 +4,7 @@ const authenticate = require('../utils/middleware');
 const mySqlConnection = require('../utils/db');
 const mysql = mySqlConnection();
 
-router.post('/comment',authenticate, async(req,res) => {
+router.post('/new',authenticate, async(req,res) => {
     try {
         // console.log(req.body);
         const CREATE_COMMENT = `INSERT INTO comments (content, userid, eventid) VALUES ('${req.body.content}', '${req.user.id}', ${req.body.eventid})`

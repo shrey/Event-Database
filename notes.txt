@@ -8,3 +8,11 @@ comments
 login token
 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmdWRzOHExMnkiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwibmFtZSI6InNocmV5MiIsImlhdCI6MTYxODk5MzE0MywiZXhwIjoxNjE5NTk3OTQzfQ.Q-vM5WXsp6FbQU_e2-jzvsE0ZfXdW2ZRAtqEoE2s11E
+
+connector table
+event event, connector comment connector, registered user for event, registered user event table.
+
+
+join query :-
+
+select register.id, user.name, events.name from ((register inner join user on user.id = register.userid) inner join events on events.id = register.eventid);
