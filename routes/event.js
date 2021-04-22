@@ -12,6 +12,7 @@ router.post('/create', authenticate, async (req, res) => {
     try {
       const CREATE_EVENT = `INSERT INTO events (name, description, userid) VALUES ('${req.body.name}', '${req.body.description}', '${req.user.id}')`
       mysql.query(CREATE_EVENT, (err) => {
+        console.log(err);
         if(err) {
           res.status(501).json({error: "Login issue"});
         }
