@@ -16,3 +16,34 @@ event event, connector comment connector, registered user for event, registered 
 join query :-
 
 select register.id, user.name, events.name from ((register inner join user on user.id = register.userid) inner join events on events.id = register.eventid);
+
+select comments.content, user.name from ((commments inner join user on user.id = comments.userid));
+
+
+-------------QUERY FORMATS----------------
+
+For registering new user
+
+{
+	"email": "newuser@gmail.com",
+	"name": "Samuel Singh",
+	"password": "shrey123"
+}
+
+For logging in
+
+{
+	"email": "newuser@gmail.com",
+	"password": "shrey123"
+}
+
+
+make entity relationship diagram
+
+rating table
+
+email subscritption 1 to 1
+
+best friend one to one
+
+comment connector join

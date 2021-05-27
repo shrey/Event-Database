@@ -4,6 +4,9 @@ const authRoutes = require('./routes/authentication');
 const eventRoutes = require('./routes/event');
 const commentRoutes = require('./routes/comments');
 const registerRoutes = require('./routes/register');
+const friendRoutes = require('./routes/friends');
+const subscriptionsRoutes = require('./routes/subscriptions');
+const ratingRoutes = require('./routes/rating');
 
 // require('dotenv').config()
 // var logger = require('morgan')
@@ -28,10 +31,13 @@ myConnection.connect((err)=>{
 })
 
 app.use(homeRoutes);
-app.use(authRoutes);
+app.use('/user',authRoutes);
 app.use('/events',eventRoutes);
 app.use('/register',registerRoutes);
-app.use(commentRoutes);
+app.use('/comment',commentRoutes);
+app.use('/friend',friendRoutes);
+app.use(subscriptionsRoutes);
+app.use(ratingRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server listening on Port ${process.env.PORT || 3000}`)

@@ -11,7 +11,7 @@ const bcyrpt = require('bcryptjs')
 router.post('/login', async (req, res) => {
     const FIND_USER = `SELECT * FROM user WHERE email = "${req.body.email}"`
     mysql.query(FIND_USER, (err, user) => {
-    // console.log(user[0].password, err)
+    console.log(user[0].password, err)
     if (err) {
       res.status(400).json({
         message: 'Login failed'
@@ -34,6 +34,7 @@ router.post('/login', async (req, res) => {
   })
   }
 )
+
 router.post('/register', async(req,res) => {
     try{
         await authController.registerController(req.body);
@@ -42,6 +43,19 @@ router.post('/register', async(req,res) => {
     catch (error) {
         res.status(400).json({status: 'Error occured', error: error});
     }
+})
+
+router.get('/all', async(req,res) => {
+  const GET_USERS = `Select id, name from user`;
+  mysql.query(GET_USERS, (err,result) => {
+    if(err){
+      res.status(400).json({
+        message: 'Action failed'
+      });
+    }else{
+      res.status(200).json(result);
+    }
+  })
 })
 
 module.exports = router;
