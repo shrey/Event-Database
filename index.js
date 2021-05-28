@@ -7,6 +7,7 @@ const registerRoutes = require('./routes/register');
 const friendRoutes = require('./routes/friends');
 const subscriptionsRoutes = require('./routes/subscriptions');
 const ratingRoutes = require('./routes/rating');
+const messageRoutes = require('./routes/message');
 
 // require('dotenv').config()
 // var logger = require('morgan')
@@ -38,6 +39,7 @@ app.use('/comment',commentRoutes);
 app.use('/friend',friendRoutes);
 app.use(subscriptionsRoutes);
 app.use(ratingRoutes);
+app.use(messageRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server listening on Port ${process.env.PORT || 3000}`)

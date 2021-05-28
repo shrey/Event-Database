@@ -25,8 +25,8 @@ select comments.content, user.name from ((commments inner join user on user.id =
 For registering new user
 
 {
-	"email": "newuser@gmail.com",
-	"name": "Samuel Singh",
+	"email": "newuser1@gmail.com",
+	"name": "John Doe",
 	"password": "shrey123"
 }
 
@@ -47,3 +47,8 @@ email subscritption 1 to 1
 best friend one to one
 
 comment connector join
+
+workflow
+
+signup -> login -> create event -> see my events -> register for event x 2 -> show all registered -> comment on event -> rate the event ->
+-> add friend -> message the user -> view the inbox -> subscribe to mail service
